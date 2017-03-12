@@ -1,26 +1,134 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FCP-o8-j4L">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Shopping List-->
+        <scene sceneID="nfs-0W-Nhc">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Vn-Qf-kmV" customClass="TableViewController" customModule="NSKeyedArchiverBlog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="oTY-hf-aip"/>
+                        <viewControllerLayoutGuide type="bottom" id="UiN-Jg-kfn"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="PH6-e6-3Nt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="64Z-vf-nER">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="8GL-6b-UAE">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8GL-6b-UAE" id="Icp-zh-WPA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6Vn-Qf-kmV" id="CyB-UR-iCf"/>
+                                    <outlet property="delegate" destination="6Vn-Qf-kmV" id="7KM-V3-m0P"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UiN-Jg-kfn" firstAttribute="top" secondItem="64Z-vf-nER" secondAttribute="bottom" id="9rp-YY-83n"/>
+                            <constraint firstItem="64Z-vf-nER" firstAttribute="top" secondItem="oTY-hf-aip" secondAttribute="bottom" id="CZA-mQ-1Gg"/>
+                            <constraint firstItem="64Z-vf-nER" firstAttribute="leading" secondItem="PH6-e6-3Nt" secondAttribute="leading" id="Epm-hf-tAf"/>
+                            <constraint firstAttribute="trailing" secondItem="64Z-vf-nER" secondAttribute="trailing" id="qLD-rb-J0l"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Shopping List" image="To Do-25" id="xFV-Yz-mRU"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oZe-sh-H5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-498.39999999999998" y="258.62068965517244"/>
+        </scene>
+        <!--Add New Item-->
+        <scene sceneID="VGM-Db-Fua">
+            <objects>
+                <viewController id="edu-pA-mkK" customClass="ViewController" customModule="NSKeyedArchiverBlog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1ey-P5-DKn"/>
+                        <viewControllerLayoutGuide type="bottom" id="0c8-Di-U2n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ksg-9G-GdU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uRd-Rn-d0f">
+                                <rect key="frame" x="25" y="237" width="325" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osN-xk-Iif">
+                                <rect key="frame" x="163" y="318" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitBtnTapped:" destination="edu-pA-mkK" eventType="touchUpInside" id="pZf-SG-dih"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make a Shopping List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-TS-LCN">
+                                <rect key="frame" x="105" y="158" width="164" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uRd-Rn-d0f" firstAttribute="top" secondItem="Hfl-TS-LCN" secondAttribute="bottom" constant="58" id="HHv-La-K5p"/>
+                            <constraint firstItem="Hfl-TS-LCN" firstAttribute="top" secondItem="1ey-P5-DKn" secondAttribute="bottom" constant="138" id="Kiw-dn-Jc7"/>
+                            <constraint firstItem="Hfl-TS-LCN" firstAttribute="leading" secondItem="Ksg-9G-GdU" secondAttribute="leadingMargin" constant="89" id="PbP-bt-Mjx"/>
+                            <constraint firstItem="uRd-Rn-d0f" firstAttribute="leading" secondItem="Ksg-9G-GdU" secondAttribute="leadingMargin" constant="9" id="bCy-tZ-8fL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uRd-Rn-d0f" secondAttribute="trailing" constant="9" id="uvy-5q-yGa"/>
+                            <constraint firstItem="osN-xk-Iif" firstAttribute="top" secondItem="uRd-Rn-d0f" secondAttribute="bottom" constant="51" id="xAU-iG-dcZ"/>
+                            <constraint firstItem="osN-xk-Iif" firstAttribute="leading" secondItem="Ksg-9G-GdU" secondAttribute="leadingMargin" constant="147" id="zgs-c2-4C7"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add New Item" image="Edit-25" id="rej-1j-f9b"/>
+                    <connections>
+                        <outlet property="itemTextfield" destination="uRd-Rn-d0f" id="e5f-ic-rr2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wwq-WA-0qQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-498.39999999999998" y="-396.25187406296857"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jxj-nQ-XW5">
+            <objects>
+                <tabBarController id="FCP-o8-j4L" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="M4Q-XR-9MM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="edu-pA-mkK" kind="relationship" relationship="viewControllers" id="JMY-44-N8Q"/>
+                        <segue destination="6Vn-Qf-kmV" kind="relationship" relationship="viewControllers" id="GBx-Nr-Xdd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hvp-zG-9Qa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1451" y="-69"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Edit-25" width="25" height="25"/>
+        <image name="To Do-25" width="25" height="25"/>
+    </resources>
 </document>
