@@ -8,11 +8,10 @@
 
 import Foundation
 
-//NSCoding = nscoder and nsdecoder
-//1 - inherit from Nsobject so we can implement nscoding
+//1 - Adopt the NSObject and NSCoding protocols
 class ShoppingItem: NSObject, NSCoding {
     
-    //5 - a way
+    //5 - A safe way of naming my decoder key(s)
     struct Keys {
         static let name = "name"
     }
@@ -21,7 +20,7 @@ class ShoppingItem: NSObject, NSCoding {
     
     override init() {}
     
-    //4 - our own initializer
+    //4 - my own initializer
     init(name: String) {
         self._name = name
     }

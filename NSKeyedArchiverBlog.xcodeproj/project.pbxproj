@@ -41,6 +41,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		455F80D41E75A205000F556A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				45B998921E7505D100EC7AC1 /* ViewController.swift */,
+				455F80D01E758E6B000F556A /* TableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		455F80D51E75A20E000F556A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				45B998941E7505D100EC7AC1 /* Main.storyboard */,
+				45B998991E7505D100EC7AC1 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		455F80D61E75A216000F556A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				455F80D21E759954000F556A /* DataStore.swift */,
+				45B998A21E75072E00EC7AC1 /* ShoppingItem.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		45B998841E7505D100EC7AC1 = {
 			isa = PBXGroup;
 			children = (
@@ -61,13 +88,10 @@
 			isa = PBXGroup;
 			children = (
 				45B998901E7505D100EC7AC1 /* AppDelegate.swift */,
-				45B998921E7505D100EC7AC1 /* ViewController.swift */,
-				45B998941E7505D100EC7AC1 /* Main.storyboard */,
-				455F80D01E758E6B000F556A /* TableViewController.swift */,
-				455F80D21E759954000F556A /* DataStore.swift */,
-				45B998A21E75072E00EC7AC1 /* ShoppingItem.swift */,
+				455F80D41E75A205000F556A /* ViewControllers */,
+				455F80D51E75A20E000F556A /* Views */,
+				455F80D61E75A216000F556A /* Models */,
 				45B998971E7505D100EC7AC1 /* Assets.xcassets */,
-				45B998991E7505D100EC7AC1 /* LaunchScreen.storyboard */,
 				45B9989C1E7505D100EC7AC1 /* Info.plist */,
 			);
 			path = NSKeyedArchiverBlog;

@@ -50,6 +50,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Shopping List" image="To Do-25" id="xFV-Yz-mRU"/>
+                    <connections>
+                        <outlet property="tableView" destination="64Z-vf-nER" id="kQF-Ec-8Tc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZe-sh-H5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

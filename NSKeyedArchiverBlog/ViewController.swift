@@ -18,7 +18,6 @@ class ViewController: UIViewController {
         if itemTextfield.text != "" {
             if let unwrappedText = itemTextfield.text {
                 let newShoppingListItem = ShoppingItem(name: unwrappedText)
-//                self.store.shoppingItems.append(newShoppingListItem)
                 self.saveData(item: newShoppingListItem)
             }
         }
